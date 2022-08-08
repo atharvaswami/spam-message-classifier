@@ -1,6 +1,5 @@
 import streamlit as st
 import joblib
-import pickle
 
 def predict(text):
     labels = ['Not Spam', 'Spam']
@@ -11,7 +10,7 @@ def predict(text):
     return str('This message is: '+labels[v])
 
 if __name__ == '__main__':    
-    cv = pickle.load(open("vector.pkl", "rb"))
+    cv = joblib.load("vector.pkl")
     model = joblib.load('model.pkl')
 
     st.title('Spam Classifier')
