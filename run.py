@@ -5,6 +5,7 @@ import re
 import nltk
 import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 import string
 from sklearn.model_selection import train_test_split
