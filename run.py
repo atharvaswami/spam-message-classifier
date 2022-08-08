@@ -5,16 +5,10 @@ import re
 import nltk
 import sklearn
 from sklearn.feature_extraction.text import CountVectorizer
-#nltk.download('stopwords')
 from nltk.corpus import stopwords
 import string
 from sklearn.model_selection import train_test_split
 from sklearn.naive_bayes import MultinomialNB
-from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
-from joblib import Parallel, delayed
-import joblib
-import pickle
-import os.path
 
 def clean_data(message):
     message_without_punc = [character for character in message if character not in string.punctuation]
